@@ -1,5 +1,11 @@
-function displayMessage(arg){
-    console.log(arg);
+/**
+ * This function displays a message in the console.
+ *
+ * @param {string} msg - The message to be displayed.
+ * @returns {void} This function does not return anything.
+ */
+const displayMessage = (msg) => {
+    console.log(msg);
 }
 
 module.exports = displayMessage;
