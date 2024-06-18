@@ -1,0 +1,25 @@
+{
+  "name": "0x05-node_js_basic",
+  "version": "1.0.0",
+  "description": "basics of nodejs",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "alx-backend-javascript"
+  },
+  "keywords": [
+    "Back-end",
+    "JavaScript",
+    "ES6",
+    "NodeJS",
+    "ExpressJS"
+  ],
+  "author": "Karl",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
