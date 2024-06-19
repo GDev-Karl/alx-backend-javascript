@@ -1,11 +1,12 @@
 
 /**
- * Displays message
+ * Displays a message to the console.
  * 
- * @param {string} msg 
+ * @param {string} msg - The message to display.
+ * @returns {void} - Nothing.
  */
 const displayMessage = (msg) => {
-    console.log(msg)
+    console.log(msg);
 }
 
-module.exports = displayMessage;
+export default displayMessage;
