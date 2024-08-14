@@ -1,5 +1,5 @@
-const getStudentIdsSum = (students) => {
-  students.reduce((sum, student) => sum + student.id, 0);
-};
+function getStudentIdsSum(list) {
+  return list.reduce((sum, student) => sum + student.id, 0);
+}
 
 export default getStudentIdsSum;
