@@ -1,26 +1,14 @@
-const { readFile } = require('fs');
+const express = require("express");
 
-module.exports = function readDatabase(filePath) {
-  const students = {};
-  return new Promise((resolve, reject) => {
-    readFile(filePath, (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        const lines = data.toString().split('\n');
-        const noHeader = lines.slice(1);
-        for (let i = 0; i < noHeader.length; i += 1) {
-          if (noHeader[i]) {
-            const field = noHeader[i].toString().split(',');
-            if (Object.prototype.hasOwnProperty.call(students, field[3])) {
-              students[field[3]].push(field[0]);
-            } else {
-              students[field[3]] = [field[0]];
-            }
-          }
-        }
-        resolve(students);
-      }
-    });
-  });
-};
+const router = require("./routes/index");
+
+const app = express();
+const port = 1245;
+
+app.use("/", router);
+app.use("/students", router);
+app.use("/students/:major", router);
+
+app.listen(port);
+
+export default app;
