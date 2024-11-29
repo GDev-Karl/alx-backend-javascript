@@ -1,8 +1,14 @@
-function calculateNumber(a, b) {
-  const an = Math.round(a);
-  const bn = Math.round(b);
-  const c = an + bn;
-  return c;
-}
+const express = require("express");
 
-module.exports = calculateNumber;
+const app = express();
+const port = 7865;
+
+app.get("/", (request, response) => {
+  response.send("Welcome to the payment system");
+});
+
+app.listen(port, () => {
+  console.log("API available on localhost port 7865");
+});
+
+module.exports = app;
